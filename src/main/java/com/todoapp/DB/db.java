@@ -5,6 +5,7 @@ import java.util.Iterator;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 
 import org.bson.Document;
 
@@ -28,5 +29,9 @@ public class db {
             counter++;
         }
         return arr;
+    }
+
+    public void delete(String value){
+        collection.deleteOne(Filters.eq("todo", value));
     }
 }
