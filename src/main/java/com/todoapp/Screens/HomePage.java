@@ -47,6 +47,7 @@ public class HomePage implements ActionListener {
         frame.add(addtodo);
         frame.add(textField);
         frame.setLayout(null);
+        frame.getContentPane().setBackground(Color.white);
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
